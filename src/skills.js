@@ -34,7 +34,7 @@ class Skill {
                   get_effect_description = () => { return ''; }, 
                   parent_skill = null, 
                   milestones = {},
-                  xp_scaling = 1.8,
+                  xp_scaling = 1,
                   is_unlocked = true,
                   category,
                 }) 
@@ -1374,7 +1374,7 @@ Multiplies AP with daggers by ${Math.round((get_total_skill_coefficient({skill_i
                                     description: "Good, regular sleep is the basis of getting stronger and helps your body heal.",
                                     base_xp_cost: 1000,
                                     visibility_treshold: 300,
-                                    xp_scaling: 2,
+                                    xp_scaling: 1,
                                     category: "Activity",
                                     max_level: 10,
                                     max_level_coefficient: 2.5,    
@@ -1819,7 +1819,7 @@ Multiplies AP with daggers by ${Math.round((get_total_skill_coefficient({skill_i
         category: "Gathering",
         base_xp_cost: 10,
         visibility_treshold: 4,
-        xp_scaling: 1.6,
+        xp_scaling: 1,
     });
 
     skills["Mining"] = new Skill({skill_id: "Mining",
@@ -1828,7 +1828,7 @@ Multiplies AP with daggers by ${Math.round((get_total_skill_coefficient({skill_i
         category: "Gathering",
         base_xp_cost: 10,
         visibility_treshold: 4,
-        xp_scaling: 1.6,
+        xp_scaling: 1,
     });
 
     skills["Herbalism"] = new Skill({skill_id: "Herbalism",
@@ -1837,7 +1837,7 @@ Multiplies AP with daggers by ${Math.round((get_total_skill_coefficient({skill_i
         category: "Gathering",
         base_xp_cost: 10,
         visibility_treshold: 4,
-        xp_scaling: 1.6,
+        xp_scaling: 1,
     });
 
     skills["Animal handling"] = new Skill({
@@ -1847,7 +1847,7 @@ Multiplies AP with daggers by ${Math.round((get_total_skill_coefficient({skill_i
         category: "Gathering",
         base_xp_cost: 10,
         visibility_treshold: 4,
-        xp_scaling: 1.6,
+        xp_scaling: 1,
     });
 })();
 
@@ -1859,7 +1859,7 @@ Multiplies AP with daggers by ${Math.round((get_total_skill_coefficient({skill_i
         description: "Turn smaller pieces into one bigger thing",
         category: "Crafting",
         base_xp_cost: 40,
-        xp_scaling: 1.5,
+        xp_scaling: 1.1,
         max_level: 60,
         get_effect_description: () => {
             return `Quality cap: ${get_crafting_quality_caps("Crafting").components}% for comps, ${get_crafting_quality_caps("Crafting").equipment}% for eq`;
@@ -1871,7 +1871,7 @@ Multiplies AP with daggers by ${Math.round((get_total_skill_coefficient({skill_i
         description: "Turning raw ore into raw metal",
         category: "Crafting",
         base_xp_cost: 40,
-        xp_scaling: 1.5,
+        xp_scaling: 1.1,
         max_level: 60,
     });
     skills["Forging"] = new Skill({
@@ -1880,7 +1880,7 @@ Multiplies AP with daggers by ${Math.round((get_total_skill_coefficient({skill_i
         description: "Turning raw metal into something useful",
         category: "Crafting",
         base_xp_cost: 40,
-        xp_scaling: 1.5,
+        xp_scaling: 1.1,
         max_level: 60,
         get_effect_description: () => {
             return `Quality cap: ${get_crafting_quality_caps("Forging").components}% for components`;
@@ -1901,7 +1901,7 @@ Multiplies AP with daggers by ${Math.round((get_total_skill_coefficient({skill_i
         description: "Making the unedible edible",
         category: "Crafting",
         base_xp_cost: 40,
-        xp_scaling: 1.5,
+        xp_scaling: 1.1,
         max_level: 60,
     });
     skills["Alchemy"] = new Skill({
@@ -1910,7 +1910,7 @@ Multiplies AP with daggers by ${Math.round((get_total_skill_coefficient({skill_i
         description: "Extracting and enhancing useful properties of the ingredients",
         category: "Crafting",
         base_xp_cost: 40,
-        xp_scaling: 1.5,
+        xp_scaling: 1.1,
         max_level: 60,
     });
 })();
@@ -1923,7 +1923,7 @@ Multiplies AP with daggers by ${Math.round((get_total_skill_coefficient({skill_i
         names: {0: "Tough skin", 5: "Wooden skin", 10: "Iron skin"},
         description: "As it gets damaged, your skin regenerates to be tougher and tougher",
         base_xp_cost: 400,
-        xp_scaling: 1.9,
+        xp_scaling: 1,
         max_level: 30,
         max_level_bonus: 30,
         get_effect_description: ()=> {
@@ -2100,7 +2100,7 @@ Multiplies AP with daggers by ${Math.round((get_total_skill_coefficient({skill_i
         flavour_text: "You are now breathing manually",
         base_xp_cost: 300,
         visibility_treshold: 290,
-        xp_scaling: 1.6,
+        xp_scaling: 1,
         category: "Character",
         max_level_coefficient: 2,
         max_level: 40,
