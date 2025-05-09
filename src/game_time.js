@@ -11,7 +11,7 @@ function Game_time(new_time) {
     //day_count is purely for calculating day of the week, by default it always start at monday (so day_count = 1)
 
     this.goUp = function(how_much) {
-        this.minute += how_much || 1;
+        this.minute += how_much || 20;
         if(this.minute >= 60) {
             const m = this.minute % 60;
             const h = Math.floor(this.minute/60);
