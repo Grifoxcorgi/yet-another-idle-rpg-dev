@@ -171,11 +171,11 @@ const faved_stances = {};
 const favourite_consumables = {};
 //consumables that are to be used automatically if their effect runs out
 
-const tickrate = 1;
+const tickrate = 10;
 //how many ticks per second
 //1 is the default value; going too high might make the game unstable
 
-const global_xp_multiplier = 1;
+const global_xp_multiplier = 10;
 
 //stuff from options panel
 const options = {
