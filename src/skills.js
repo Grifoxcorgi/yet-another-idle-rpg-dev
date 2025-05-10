@@ -81,7 +81,7 @@ class Skill {
 
         this.milestones = milestones;
 
-        this.xp_scaling = xp_scaling > 1 ? xp_scaling : 1.6;
+        this.xp_scaling = xp_scaling > 1 ? xp_scaling : 1;
         //how many times more xp needed for next level
     }
 
@@ -793,7 +793,7 @@ Multiplies attack speed and AP in unarmed combat by ${Math.round((get_total_skil
                                     names: {0: "Night vision"},
                                     description: "Ability to see in darkness",
                                     base_xp_cost: 600,
-                                    xp_scaling: 1.9,
+                                    xp_scaling: 1,
                                     max_level: 10,
                                     category: "Environmental",
                                     get_effect_description: () => {
@@ -851,7 +851,7 @@ Multiplies attack speed and AP in unarmed combat by ${Math.round((get_total_skil
                 names: {0: "Presence sensing"},
                 description: "Ability to sense a presence without using your eyes",
                 base_xp_cost: 60,
-                xp_scaling: 2,
+                xp_scaling: 1,
                 max_level: 20,
                 category: "Environmental",
                 get_effect_description: () => {
@@ -925,7 +925,7 @@ Multiplies attack speed and AP in unarmed combat by ${Math.round((get_total_skil
         category: "Environmental",
         base_xp_cost: 120,
         max_level: 40,
-        xp_scaling: 1.9,
+        xp_scaling: 1,
         get_effect_description: ()=> {
             return `Reduces eldritch effects by ^${Math.round(100-100*get_total_skill_level("Strength of mind")/skills["Strength of mind"].max_level)/100}`;
         },
@@ -1290,7 +1290,7 @@ Multiplies AP with daggers by ${Math.round((get_total_skill_coefficient({skill_i
                                 base_xp_cost: 40,
                                 category: "Activity",
                                 max_level: 10,
-                                xp_scaling: 1.6,
+                                xp_scaling: 1,
                                 max_level_coefficient: 2,
                                 milestones: {
                                     1: {
@@ -1859,7 +1859,7 @@ Multiplies AP with daggers by ${Math.round((get_total_skill_coefficient({skill_i
         description: "Turn smaller pieces into one bigger thing",
         category: "Crafting",
         base_xp_cost: 40,
-        xp_scaling: 1.1,
+        xp_scaling: 1,
         max_level: 60,
         get_effect_description: () => {
             return `Quality cap: ${get_crafting_quality_caps("Crafting").components}% for comps, ${get_crafting_quality_caps("Crafting").equipment}% for eq`;
@@ -1871,7 +1871,7 @@ Multiplies AP with daggers by ${Math.round((get_total_skill_coefficient({skill_i
         description: "Turning raw ore into raw metal",
         category: "Crafting",
         base_xp_cost: 40,
-        xp_scaling: 1.1,
+        xp_scaling: 1,
         max_level: 60,
     });
     skills["Forging"] = new Skill({
@@ -1880,7 +1880,7 @@ Multiplies AP with daggers by ${Math.round((get_total_skill_coefficient({skill_i
         description: "Turning raw metal into something useful",
         category: "Crafting",
         base_xp_cost: 40,
-        xp_scaling: 1.1,
+        xp_scaling: 1,
         max_level: 60,
         get_effect_description: () => {
             return `Quality cap: ${get_crafting_quality_caps("Forging").components}% for components`;
@@ -1901,7 +1901,7 @@ Multiplies AP with daggers by ${Math.round((get_total_skill_coefficient({skill_i
         description: "Making the unedible edible",
         category: "Crafting",
         base_xp_cost: 40,
-        xp_scaling: 1.1,
+        xp_scaling: 1,
         max_level: 60,
     });
     skills["Alchemy"] = new Skill({
@@ -1910,7 +1910,7 @@ Multiplies AP with daggers by ${Math.round((get_total_skill_coefficient({skill_i
         description: "Extracting and enhancing useful properties of the ingredients",
         category: "Crafting",
         base_xp_cost: 40,
-        xp_scaling: 1.1,
+        xp_scaling: 1,
         max_level: 60,
     });
 })();
@@ -2054,7 +2054,7 @@ Multiplies AP with daggers by ${Math.round((get_total_skill_coefficient({skill_i
         category: "Character",
         base_xp_cost: 120,
         max_level: 10,
-        xp_scaling: 2,
+        xp_scaling: 1,
         milestones: {
             1: {
                 xp_multipliers: {
